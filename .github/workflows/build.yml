@@ -30,4 +30,4 @@ jobs:
         run: docker build . -t fluxter/gitlab-runner:latest -t fluxter/gitlab-runner:build-$GITHUB_RUN_NUMBER
       - 
         name: Push Docker images
-        run: docker push fluxter/gitlab-runner
+        run: docker push fluxter/gitlab-runner --all-tags
