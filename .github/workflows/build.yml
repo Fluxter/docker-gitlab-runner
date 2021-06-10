@@ -31,6 +31,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: 
-            - fluxter/gitlab-runner:latest
-            - fluxter/gitlab-runner:build-${{ env.GITHUB_RUN_NUMBER }}
+          tags: fluxter/gitlab-runner:latest, fluxter/gitlab-runner:build-${{ env.GITHUB_RUN_NUMBER }}
