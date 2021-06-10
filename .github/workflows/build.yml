@@ -27,7 +27,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Build Docker images
-        run: docker build . -t fluxter/gitlab-runner:latest, fluxter/gitlab-runner:build-$GITHUB_RUN_NUMBER
+        run: docker build . -t fluxter/gitlab-runner:latest -t fluxter/gitlab-runner:build-$GITHUB_RUN_NUMBER
       - 
         name: Push Docker images
         run: docker push fluxter/gitlab-runner
